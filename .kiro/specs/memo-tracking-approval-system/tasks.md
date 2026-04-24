@@ -29,8 +29,8 @@ This plan implements the Memo Tracking and Approval System in three phases: Phas
     - Create shared test utilities and fixtures (test client, authenticated sessions, seed data)
     - _Requirements: 14.1_
 
-- [ ] 2. Implement service abstraction interfaces and local/mock implementations
-  - [ ] 2.1 Define all service abstraction interfaces (ABCs)
+- [x] 2. Implement service abstraction interfaces and local/mock implementations
+  - [x] 2.1 Define all service abstraction interfaces (ABCs)
     - Create `app/interfaces/storage_interface.py` — StorageInterface with upload_file, download_file, delete_file, get_file_url
     - Create `app/interfaces/face_recognition_interface.py` — FaceRecognitionInterface with detect_faces, index_face, compare_faces, search_faces_by_image, delete_faces
     - Create `app/interfaces/voice_transcription_interface.py` — VoiceTranscriptionInterface with transcribe_audio
@@ -40,7 +40,7 @@ This plan implements the Memo Tracking and Approval System in three phases: Phas
     - Include all dataclasses: FaceMatch, TranscriptionResult, CommandIntent, EmailMessage
     - _Requirements: 15.7_
 
-  - [ ] 2.2 Implement local/mock adapters for all interfaces
+  - [x] 2.2 Implement local/mock adapters for all interfaces
     - Create `app/adapters/local/` with: LocalStorageAdapter (filesystem-based), MockFaceRecognitionAdapter, MockVoiceTranscriptionAdapter, MockVoiceCommandAdapter, MockTextToSpeechAdapter, MockNotificationAdapter (log-based)
     - Each mock returns deterministic, configurable responses for testing
     - Create dependency injection setup in `app/core/dependencies.py` to wire interfaces to local adapters
